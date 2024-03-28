@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styled Form</title>
+<style>
+  /* Styles for form container */
+  form {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Styles for labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  /* Styles for text inputs */
+  input[type="text"] {
+    width: calc(100% - 20px); /* Adjust according to your layout */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  /* Styles for radio buttons */
+  input[type="radio"] {
+    margin-bottom: 5px;
+  }
+
+  /* Styles for checkboxes */
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  /* Styles for select dropdown */
+  select {
+    width: calc(100% - 20px); /* Adjust according to your layout */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  /* Styles for submit button */
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  /* Styles for submit button on hover */
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+  <form id="myForm">
+  <label for="age">Age:</label>
+  <input type="text" id="age" name="age"><br><br>
+  
+  <label for="sex">Sex:</label><br>
+  <input type="radio" id="male" name="sex" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="sex" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="sex" value="other">
+  <label for="other">Other</label><br><br>
+  
+  <label for="hospital_id">Hospital ID:</label>
+  <input type="text" id="hospital_id" name="hospital_id"><br><br>
+  
+  <label for="pregnancy">Pregnancy:</label><br>
+  <input type="radio" id="pregnancy_yes" name="pregnancy" value="yes">
+  <label for="pregnancy_yes">Yes</label><br>
+  <input type="radio" id="pregnancy_no" name="pregnancy" value="no">
+  <label for="pregnancy_no">No</label><br>
+  <label for="months_pregnant">Months pregnant:</label>
+  <select id="months_pregnant" name="months_pregnant">
+    <option value="1">1 month</option>
+    <option value="2">2 months</option>
+    <option value="3">3 months</option>
+    <option value="4">4 months</option>
+    <option value="5">5 months</option>
+    <option value="6">6 months</option>
+    <option value="7">7 months</option>
+    <option value="8">8 months</option>
+    <option value="9">9 months</option>
+  </select><br><br>
+  
+  <label for="cardiac">Cardiac:</label><br>
+  <input type="radio" id="cardiac_yes" name="cardiac" value="yes">
+  <label for="cardiac_yes">Yes</label><br>
+  <input type="radio" id="cardiac_no" name="cardiac" value="no">
+  <label for="cardiac_no">No</label><br>
+  <label>Type:</label><br>
+  <input type="checkbox" id="with_stent" name="with_stent">
+  <label for="with_stent">With stent</label><br>
+  <input type="checkbox" id="only_medicine" name="only_medicine">
+  <label for="only_medicine">Only medicine</label><br>
+  <input type="checkbox" id="ccf" name="ccf">
+  <label for="ccf">Congestive cardiac failure (CCF)</label><br>
+  <input type="checkbox" id="valvular" name="valvular">
+  <label for="valvular">Valvular heart disease</label><br>
+  <input type="checkbox" id="cardiomyopathy" name="cardiomyopathy">
+  <label for="cardiomyopathy">Cardiomyopathy</label><br><br>
+  
+  <label for="pulmo">Pulmo:</label><br>
+  <input type="radio" id="copd" name="pulmo" value="COPD">
+  <label for="copd">COPD</label><br>
+  <input type="radio" id="asthma" name="pulmo" value="Asthma">
+  <label for="asthma">Asthma</label><br><br>
+  
+  <label for="renal">Renal:</label><br>
+  <input type="radio" id="post_transplant_dialysis" name="renal" value="Post transplant dialysis">
+  <label for="post_transplant_dialysis">Post transplant dialysis</label><br>
+  <label for="renal_options">Options:</label><br>
+  <input type="radio" id="just_prior" name="renal_options" value="Just prior">
+  <label for="just_prior">Just prior</label><br>
+  <input type="radio" id="immediate_post" name="renal_options" value="Immediate post">
+  <label for="immediate_post">Immediate post</label><br>
+  <input type="radio" id="intermittent" name="renal_options" value="Intermittent">
+  <label for="intermittent">Intermittent</label><br><br>
+  
+  <label for="drugs">Drugs:</label><br>
+  <input type="checkbox" id="steroids" name="steroids">
+  <label for="steroids">Steroids</label><br>
+  <input type="checkbox" id="lasix" name="lasix">
+  <label for="lasix">Lasix</label><br>
+  <input type="checkbox" id="mannitol" name="mannitol">
+  <label for="mannitol">Mannitol</label><br>
+  <label for="other_drugs">Other (Please specify):</label>
+  <input type="text" id="other_drugs" name="other_drugs"><br><br>
+  
+  <label for="antihypertension">Antihypertension Medication:</label>
+  <input type="text" id="antihypertension" name="antihypertension"><br><br>
+  
+  <label for="diabetic">Diabetic:</label><br>
+  <label for="diabetic_since_when">Since when:</label>
+  <input type="text" id="diabetic_since_when" name="diabetic_since_when"><br>
+  <label>Type:</label><br>
+  <input type="checkbox" id="hb" name="hb">
+  <label for="hb">HB</label><br>
+  <input type="checkbox" id="a" name="a">
+  <label for="a">A</label><br>
+  <input type="checkbox" id="c" name="c">
+  <label for="c">C</label><br>
+  <label for="insulin_or_dha">On insulin or DHA:</label>
+  <input type="text" id="insulin_or_dha" name="insulin_or_dha"><br><br>
+  
+  <label for="smoking">Smoking:</label><br>
+  <input type="radio" id="smoking_yes" name="smoking" value="yes">
+  <label for="smoking_yes">Yes</label><br>
+  <input type="radio" id="smoking_no" name="smoking" value="no">
+  <label for="smoking_no">No</label><br>
+  <label for="cigarettes_per_day">Cigarettes per day:</label>
+  <label for="malignancy">Malignancy:</label><br>
+  <input type="checkbox" id="head_neck" name="head_neck">
+  <label for="head_neck">Head and Neck</label><br>
+  <input type="checkbox" id="lungs" name="lungs">
+  <label for="lungs">Lungs</label><br>
+  <input type="checkbox" id="git" name="git">
+  <label for="git">GIT (Gastrointestinal Tract)</label><br>
+  <input type="checkbox" id="brain" name="brain">
+  <label for="brain">Brain</label><br>
+  <input type="checkbox" id="renal_malignancy" name="renal_malignancy">
+  <label for="renal_malignancy">Renal</label><br>
+  <input type="checkbox" id="blood" name="blood">
+  <label for="blood">Blood</label><br><br>
+
+  <label for="investigation">Investigation:</label><br>
+  <input type="checkbox" id="hb" name="hb">
+  <label for="hb">HB</label><br>
+  <input type="checkbox" id="ah" name="ah">
+  <label for="ah">AH</label><br>
+  <input type="checkbox" id="a" name="a">
+  <label for="a">A</label><br>
+  <input type="checkbox" id="c" name="c">
+  <label for="c">C</label><br>
+  <input type="checkbox" id="creatinine" name="creatinine">
+  <label for="creatinine">Creatinine</label><br>
+  <input type="checkbox" id="anp" name="anp">
+  <label for="anp">ANP</label><br>
+  <input type="checkbox" id="bnp" name="bnp">
+  <label for="bnp">BNP</label><br>
+  <input type="checkbox" id="sodium" name="sodium">
+  <label for="sodium">Sodium</label><br>
+  <input type="checkbox" id="potassium" name="potassium">
+  <label for="potassium">Potassium</label><br><br>
+
+  <label for="hyperthyroid">Hyperthyroid:</label><br>
+  <input type="radio" id="hyperthyroid_yes" name="hyperthyroid" value="yes">
+  <label for="hyperthyroid_yes">Yes</label><br>
+  <input type="radio" id="hyperthyroid_no" name="hyperthyroid" value="no">
+  <label for="hyperthyroid_no">No</label><br><br>
+
+  <label for="liver_diseases">Liver Diseases:</label><br>
+  <input type="text" id="liver_diseases" name="liver_diseases"><br><br>
+
+<input type="submit" value="Submit">
+</form>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Wrap the script in a DOMContentLoaded event listener
+  
+      const form = document.getElementById('myForm'); // Select the form element by ID
+  
+      if (form) {
+          // Check if the form element exists
+  
+          form.addEventListener('submit', function(event) {
+              event.preventDefault(); // Prevent the default form submission
+  
+              // Collect form data
+              const formData = new FormData(form);
+              const formValues = {};
+              formData.forEach((value, key) => {
+                  formValues[key] = value;
+              });
+  
+              // Convert form data to CSV format
+              const csv = Object.keys(formValues).map(key => `${key},${formValues[key]}`).join('\n');
+  
+              // Create a Blob object from the CSV data
+              const blob = new Blob([csv], { type: 'text/csv' });
+  
+              // Create a temporary anchor element
+              const anchor = document.createElement('a');
+              anchor.href = window.URL.createObjectURL(blob);
+              anchor.download = 'doctors.csv'; // Set the file name
+              anchor.style.display = 'none';
+  
+              // Append the anchor to the body and click it to trigger the download
+              document.body.appendChild(anchor);
+              anchor.click();
+  
+              // Remove the anchor from the body
+              document.body.removeChild(anchor);
+          });
+      } else {
+          console.error('Form element with ID "myForm" not found.');
+      }
+  });
+  </script>
+  
+</body>
+</html>
